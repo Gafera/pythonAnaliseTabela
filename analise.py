@@ -1,4 +1,5 @@
 import pandas as pd
+import openxls
 url1 = 'caminhoArquivoUsadoParaAnalise'
 arquivo1 = pd.read_excel(url1)
 
