@@ -1,5 +1,5 @@
 import pandas as pd
-def analisa(entrada, saida, quantidade):2  
+def analisa(entrada, saida, quantidade):
     for j in range(0, quantidade):
         url1 = 'C:/Users/Gabriel de Freitas/Documents/analises/repositorios/'
         caminhoFinal = 'C:/Users/Gabriel de Freitas/Documents/analises/results/'
