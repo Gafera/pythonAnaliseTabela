@@ -5,7 +5,7 @@ def analisa():
     listaFinal = []
     url1 = 'C:/Users/40413844/Documents/aquaTrivy/redis505Anchore.xlsx'
     url2 = 'C:/Users/40413844/Documents/aquaTrivy/redis505Clair.xlsx'
-    caminhoFinal = 'C:/Users/40413844/Desktop/aquaTrivy/results/'
+    caminhoFinal = 'C:/Users/40413844/Documents/aquaTrivy/results/teste.txt'
     #caminhoFinal += saida[j]
     arquivo1 = pd.read_excel(url1)
     arquivo2 = pd.read_excel(url2)
@@ -21,7 +21,10 @@ def analisa():
                 dados.append(nivel2.strip())
                 listaFinal.append(dados[:])
                 dados.clear()
-                
-    print(tabulate(listaFinal, headers=['CVE', 'Anchore', 'Clair'], tablefmt ='orgtbl'))            
+    data= tabulate(listaFinal, headers=['CVE', 'Anchore', 'Clair'], tablefmt ='orgtbl')
+    
+    escrever = open(caminhoFinal, 'w')
+    escrever.write(data)
+    escrever.close()     
                 
 analisa()
